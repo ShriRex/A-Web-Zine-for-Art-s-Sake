@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale-1">
+<title>A (Web)Zine for Art's Sake</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+<script src=""></script>
+</head>
+<body onclick="handleClick(event)">
+    <p>
+    <span id="greeting" class="greeting clickable gender" data-values="A Man's /An Individual's /A Woman's">An Individual's</span> 
+    constitution is such that 
+    <span id="greeting" class="greeting clickable" data-values="he /they /she">they</span>
+    must not only find 
+    <span id="greeting" class="greeting clickable language" data-values="facts,/ তথ্য,/ तथ्य,/ వాస్తవాలు,/ ವಾಸ್ತವಾಂಶಗಳು,"> facts,</span>
+    but also some laws which will lighten the burden of mere number and 
+    <span id="greeting" class="greeting clickable language" data-values="quantity./ রাশি।/ राशि।/ పరిమాణం./ ಪ್ರಮಾಣ."> quantity.</span>
+    There is yet another 
+    <span id="greeting" class="greeting clickable gender" data-values="man /individual/ woman">individual</span>
+    in me, not the physical, but the personal 
+    <span id="greeting" class="greeting clickable gender" data-values="man; /being;/ woman;">being;</span>
+    which has its likes and dislikes, and wants to find something to fulfil its needs of
+    <span id="greeting" class="greeting clickable language" data-values="love./ ভালোবাসা।/ मुहब्बत।/ ప్రేమ./ ಅನುರಾಗ."> love.</span> 
+    This personal 
+    <span id="greeting" class="greeting clickable gender" data-values="man; /being;/ woman;">being;</span>
+    is found in the region where we are free from all 
+    <span id="greeting" class="greeting clickable language" data-values="necessity,/ জরুরৎ,/ आवश्यकता,/ అవసరం,/ ಆವಶ್ಯಕತೆ,"> necessity,</span> 
+    —above the needs, both of 
+    <span id="greeting" class="greeting clickable language" data-values="body/ শরীর/ शरीर/ శరీరం/ ಶರೀರ"> body</span>  
+    and 
+    <span id="greeting" class="greeting clickable language" data-values="mind,/ মন,/ दिमाग,/ బుద్ధి,/ ಬುದ್ದಿ,"> mind,</span>
+    —above the expedient and useful. This is the 
+    <span id="greeting" class="greeting clickable language" data-values="world/ ভুবন/ संसार/ ప్రపంచం/ಜಗತ್ತು"> world</span>   
+    from which Science turns away, and in which
+    <span id="greeting" class="greeting clickable creativity" data-values="Art /(Web)Zines">(Web)Zines</span>
+    takes its place. And if we can answer the question as to what
+    <span id="greeting" class="greeting clickable creativity" data-values="art /a (web)zine">a (web)zine</span>
+    is, we shall know what this world is with which 
+    <span id="greeting" class="greeting clickable creativity" data-values="art /a (web)zine">a (web)zine</span>
+    has such intimate 
+    <span id="greeting" class="greeting clickable language" data-values="relationship./ সম্পর্ক।/ संबंध।/ సంబంధం./ ಸಂಬಂಧ."> relationship.</span>
+    </p>
+
+    <div id="b" class="unselect">
+        <button id="image">image</button>
+    </div>
+    <div id="b" class="unselect">
+        <button id="text">text</button>
+    </div>
+    <div id="b" class="unselect">
+        <button id="info-index">info/index</button>
+    </div>
+    <div id="b" class="unselect printbutton">
+        <button id="p" onclick="kioskOrBrowserPrint();">print</button>
+    </div>
+
+<script>
+          function handleClick(event) {
+  if (event.target.classList.contains("clickable")) {
+    var values = event.target.getAttribute("data-values").split("/");
+    var randomIndex = Math.floor(Math.random() * values.length);
+    var nextValue = values[randomIndex];
+    event.target.innerText = nextValue;
+  }
+}
+
+let printing = false;
+
+      async function kioskOrBrowserPrint() {
+        if (printing) return;
+        printing = true;
+        try {
+          if (window.kioskPrint) {
+            const result = await window.kioskPrint.print();
+            console.log('print result:', JSON.stringify(result));
+            if (result.success) {
+              setTimeout(() => location.reload(), 2000);
+              return;   // stay locked until the reload happens
+            } else if (result.reason !== 'duplicate') {
+              console.warn('Print failed:', result.reason);
+            }
+          } else {
+            window.print();
+            setTimeout(() => location.reload(), 2000);
+            return;
+          }
+        } catch (err) {
+          console.error('print flow error:', err);
+        }
+        printing = false;   // only unlock if we're not reloading
+      }
+      
+</script>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+html {
+  font-family: "Noto Sans", sans-serif;
+}
+
+body {
+    background-color: black;
+    margin: 20%;
+}
+
+p {
+    color: white;
+    font-family: "Noto Sans", sans-serif;
+    font-size: 1dvw;
+    line-height: 1.5dvw;
+    vertical-align: top;
+}
+
+.clickable {
+}
+
+.gender {
+    cursor: progress;
+    color: greenyellow;
+}
+
+.language {
+    cursor: help;
+    color: magenta;
+}
+
+.creativity {
+    cursor: context-menu;
+    color: aqua;
+}
+
+#greeting:hover {
+    text-decoration: underline;
+}
