@@ -1,0 +1,73 @@
+html {
+  font-family: "Noto Sans", sans-serif;
+}
+
+body {
+    background-color: black;
+    margin: 10%;
+}
+
+h3{
+    font-family: "Noto Sans", sans-serif;
+    font-size: 1lh;
+    line-height: 1.5lh;
+    vertical-align: top;
+    color: aliceblue;
+}
+
+p {
+    color: white;
+    font-family: "Noto Sans", sans-serif;
+    font-size: 0.75lh;
+    line-height: 1lh;
+    vertical-align: middle;
+}
+
+.unselect {
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
+
+.select {
+  -webkit-user-select: text; /* Safari */
+  -ms-user-select: text; /* IE 10 and IE 11 */
+  user-select: text; /* Standard syntax */
+}
+
+.unselect {
+    display: inline-block;
+}
+
+#greeting:hover {
+    text-decoration: underline;
+}
+
+@media print {
+  @page { size: 80mm auto; margin: 0; }
+
+  html {
+    width: 80mm !important;
+    height: auto !important;
+    display: block !important;
+    background: #fff !important;
+    overflow: visible !important;
+  }
+
+  body {
+    display: block !important;
+    position: static !important;
+    width: 72mm !important;
+    margin: 0 auto !important;
+    background: #fff !important;
+    font-size: 12px !important;
+  }
+
+  #g, #g * {
+    color: #000 !important;
+    -webkit-text-fill-color: #000 !important;
+    background: transparent !important;
+    text-shadow: none !important;
+    visibility: visible !important;
+  }
+}
