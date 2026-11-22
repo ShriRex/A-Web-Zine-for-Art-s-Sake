@@ -4,15 +4,23 @@ html {
 
 body {
     background-color: black;
-    margin: 20%;
+    margin: 10%;
+}
+
+h3{
+    font-family: "Noto Sans", sans-serif;
+    font-size: 1lh;
+    line-height: 1.5lh;
+    vertical-align: top;
+    color: aliceblue;
 }
 
 p {
     color: white;
     font-family: "Noto Sans", sans-serif;
-    font-size: 1dvw;
-    line-height: 1.5dvw;
-    vertical-align: top;
+    font-size: 0.75lh;
+    line-height: 1lh;
+    vertical-align: middle;
 }
 
 .clickable {
@@ -35,4 +43,8 @@ p {
 
 #greeting:hover {
     text-decoration: underline;
+}
+
+.unselect {
+    display: inline-block;
 }
