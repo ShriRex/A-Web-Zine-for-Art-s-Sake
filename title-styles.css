@@ -23,6 +23,12 @@ body {
   left:10%;
 }
 
+.archive {
+  background-color: black;
+  border: none;
+  color: aqua;
+}
+
 h3{
     font-family: "Noto Sans", sans-serif;
     font-size: 1lh;

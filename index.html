@@ -14,6 +14,7 @@
     <div class="main">
         <img src="zine images/zine-image-1.jpg" name="flip" 
         BORDER="0">
+        <span id="greeting" class="greeting clickable head" data-values="Art/A (Web)Zine">A (Web)Zine</span>
         <div class="heading">
         <h3>
         <span id="greeting" class="greeting clickable head" data-values="Art/A (Web)Zine">A (Web)Zine</span>
@@ -60,6 +61,7 @@
     <div id="b" class="unselect">
         <button onClick="window.location.reload();" id="reset"><a href="">reset</a></button>
     </div>
+
 <script>
 function handleClick(event) {
   if (event.target.classList.contains("clickable")) {
@@ -90,14 +92,16 @@ for(var i=0; i < images.length; i++)
   image.addEventListener('click', imageClicked(), false);
 }
 
-function imageClicked() {
-            var counter = 0;
-            
-return function(event)
+function imageClicked()
+{   var counter = 0;
+  return function(event)
   {
     counter++;
-    this.src = img[counter];
-  }        }
+    this.src = img[counter % img.length];
+  }
+}
+
+
 
 </script>
 </body>
