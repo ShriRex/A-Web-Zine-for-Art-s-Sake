@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale-1">
+<title>A (Web)Zine for Art's Sake</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="page-6-styles.css">
+<script src=""></script>
+<style type="text/css">
+<!--
+BODY { cursor:url(https://www.rw-designer.com/cursor-set/next-generation-set); }
+-->
+</style>
+</head>
+<body onclick="handleClick(event)">
+    <div class="lecture" st>
+      <h3>
+        What is
+        <span id="greeting" class="greeting clickable head" data-values="Art? /a (Web)Zine?">a (Web)Zine?</span>
+      </h3>
+      <h6>
+        Lecture by Rabindranath Tagore | Edited/Translated by Shriya Chunduri
+      </h6>
+    </div>
+    
+    <p>For men/individuals are the children of light. Whenever they fully realize themselves they feel their immortality. And, as they feel it, they extend their realm of the immortal into every region of human life. This building of man's/an individual's true world,—the living world of truth and beauty,—is the function of Art/a (Web)Zine.</p>
+    <p> Only beauty is not a mere fact; it cannot be accounted for, it cannot be surveyed and mapped. It is an expression. It is infinite in its suggestions, it is extravagant in its words. It is personal, therefore, beyond science. So we find that our world of expression does not accurately coincide with the world of facts, because personality surpasses facts on every side.</p>
+    <p>It is conscious of its infinity and creates from its abundance; and because, in art/a (web)zine, things are challenged from the standpoint of the immortal Person, those which are important in our customary life of facts become unreal when placed on the pedestal of art/a (web)zine. A newspaper account of some domestic incident in the life of a commercial magnate may create agitation in Society, yet would lose all its significance if placed by the side of great works of art/a (web)zine. Yet the very same incident, if treated deeply, divested of its conventional superficiality, might have a better claim in art/a (web)zine than the negotiation for raising a big loan for China, or the defeat of British diplomacy in Turkey. A mere household event of a husband's jealousy of his/their wife/partner, as depicted in one of Shakespeare's tragedies, has greater value in the realm of art/a (web)zine than the code of caste regulations in Manu's scripture or the law prohibiting inhabitants of one part of the world from receiving human treatment in another. For when facts are looked upon as mere facts, having their chain of consequences in the world of facts, they are rejected by art/a (web)zine.</p>
+    <p>When, however, such laws and regulations as I have mentioned are viewed in their application to some human individual, in all their injustice, insult and pain, then they are seen in their complete truth and they become subjects for art/a (web)zine. The disposition of a great battle may be a great fact, but it is useless for the purpose of art/a (web)zine. But what that battle has caused to a single individual soldier, separated from his loved ones and maimed for his/their life, has a vital value for art/a (web)zine which deals with reality.</p>
+
+    <div id="b" class="unselect">
+        <button id="title"><a href="index.html">title</a></button>
+    </div>
+    <div id="b" class="unselect">
+        <button id="note"><a href="note.html">editor/translator's note</a></button>
+    </div>
+    <div id="b" class="unselect">
+        <button id="page-1"><a href="page-1.html">page 1</a></button>
+    </div>
+    <div id="b" class="unselect">
+        <button id="page-2"><a href="page-2.html">page 2</a></button>
+    </div>
+    <div id="b" class="unselect">
+        <button id="page-3"><a href="page-3.html">page 3</a></button>
+    </div>
+    <div id="b" class="unselect">
+        <button id="page-4"><a href="page-4.html">page 4</a></button>
+    </div>
+    <div id="b" class="unselect">
+        <button id="page-5"><a href="page-5.html">page 5</a></button>
+    </div>
+    <div id="b" class="unselect">
+        <button id="page-6"><a href="page-6.html">page 6</a></button>
+    </div>
+    <div id="b" class="unselect">
+        <button id="page-7"><a href="page-7.html">page 7</a></button>
+    </div>
+    <div id="b" class="unselect">
+        <button id="citations"><a href="citations.html">citations</a></button>
+    </div>
+    <div id="b" class="unselect printbutton">
+        <button id="p" onclick="window.print()">print</button>
+    </div>
+    <div id="b" class="unselect">
+        <button onClick="window.location.reload();" id="reset"><a href="">reset</a></button>
+    </div>
+
+<script>
+          function handleClick(event) {
+  if (event.target.classList.contains("clickable")) {
+    var values = event.target.getAttribute("data-values").split("/");
+    var randomIndex = Math.floor(Math.random() * values.length);
+    var nextValue = values[randomIndex];
+    event.target.innerText = nextValue;
+  }
+}
+
+</script>
+</body>
+
+</html>

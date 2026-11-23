@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale-1">
+<title>A (Web)Zine for Art's Sake</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="page-7-styles.css">
+<script src=""></script>
+<style type="text/css">
+<!--
+BODY { cursor:url(https://www.rw-designer.com/cursor-set/next-generation-set); }
+-->
+</style>
+</head>
+<body onclick="handleClick(event)">
+    <div class="lecture" st>
+      <h3>
+        What is
+        <span id="greeting" class="greeting clickable head" data-values="Art? /a (Web)Zine?">a (Web)Zine?</span>
+      </h3>
+      <h6>
+        Lecture by Rabindranath Tagore | Edited/Translated by Shriya Chunduri
+      </h6>
+    </div>
+    <p>
+    <span id="greeting" class="greeting clickable gender" data-values="Man's/An Individual's/Woman's">An Individual's</span> 
+    social world is like some nebulous system of stars, consisting largely of a mist of abstractions, with such names as society, state, nation, commerce, politics and war. In their dense amorphousness 
+    <span id="greeting" class="greeting clickable gender" data-values="man/an individual/woman">an individual</span> 
+    is hidden and truth is blurred. The idea of the nation is responsible for crimes that would be appalling, if the mist could be removed for a moment. The idea of society has created forms of slavery without number, which we tolerate simply because it has deadened our consciousness of the reality of the personal 
+    <span id="greeting" class="greeting clickable gender" data-values="man./being./woman.">being.</span>
+    In the name of religion deeds have been done that would exhaust all the resources of hell itself for punishment, because with its creeds and dogmas it has applied an extensive plaster of anesthetic over a large surface of feeling humanity. In our schools the idea of the class hides the reality of the school children;—they become students and not individuals. Therefore it does not hurt us to see children's lives crushed, in their classes, like flowers pressed between book leaves. In government, the bureaucracy deals with generalizations and not with 
+    men/individuals. 
+    Once we accept as truth such a scientific maxim as "Survival of the Fittest" it immediately transforms the whole world of human personality into a monotonous desert of abstraction, where things become dreadfully simple because robbed of their mystery of life.</p>
+    <p>
+    In these large tracts of nebulousness 
+    <span id="greeting" class="greeting clickable creativity" data-values="Art/a (Web)Zine">a (Web)Zine</span>
+    is creating its stars,—stars that are definite in their forms but infinite in their personality. 
+    <span id="greeting" class="greeting clickable creativity" data-values="Art/A (Web)Zine">A (Web)Zine</span> 
+    is calling us the "children of the immortal," and proclaiming our right to dwell in the heavenly worlds. And this consciousness of the infinite, in the personal 
+    <span id="greeting" class="greeting clickable gender" data-values="man,/an individual,/woman,">an individual,</span> 
+    ever strives to make its expressions immortal and to make the whole world its own. In 
+    <span id="greeting" class="greeting clickable creativity" data-values="Art/a (Web)Zine">a (Web)Zine</span> 
+    the person in us is sending its answers to the Supreme Person, who reveals 
+    <span id="greeting" class="greeting clickable gender" data-values="Himself/Themselves/Herself">Themselves</span>
+    to us in a world of endless beauty across the lightless world of facts.
+    </p>
+
+    <div id="b" class="unselect">
+        <button id="title"><a href="index.html">title</a></button>
+    </div>
+    <div id="b" class="unselect">
+        <button id="note"><a href="note.html">editor/translator's note</a></button>
+    </div>
+    <div id="b" class="unselect">
+        <button id="page-1"><a href="page-1.html">page 1</a></button>
+    </div>
+    <div id="b" class="unselect">
+        <button id="page-2"><a href="page-2.html">page 2</a></button>
+    </div>
+    <div id="b" class="unselect">
+        <button id="page-3"><a href="page-3.html">page 3</a></button>
+    </div>
+    <div id="b" class="unselect">
+        <button id="page-4"><a href="page-4.html">page 4</a></button>
+    </div>
+    <div id="b" class="unselect">
+        <button id="page-5"><a href="page-5.html">page 5</a></button>
+    </div>
+    <div id="b" class="unselect">
+        <button id="page-6"><a href="page-6.html">page 6</a></button>
+    </div>
+    <div id="b" class="unselect">
+        <button id="page-7"><a href="page-7.html">page 7</a></button>
+    </div>
+    <div id="b" class="unselect">
+        <button id="citations"><a href="citations.html">citations</a></button>
+    </div>
+    <div id="b" class="unselect printbutton">
+        <button id="p" onclick="window.print()">print</button>
+    </div>
+    <div id="b" class="unselect">
+        <button onClick="window.location.reload();" id="reset"><a href="">reset</a></button>
+    </div>
+
+<script>
+          function handleClick(event) {
+  if (event.target.classList.contains("clickable")) {
+    var values = event.target.getAttribute("data-values").split("/");
+    var randomIndex = Math.floor(Math.random() * values.length);
+    var nextValue = values[randomIndex];
+    event.target.innerText = nextValue;
+  }
+}
+
+</script>
+</body>
+
+</html>

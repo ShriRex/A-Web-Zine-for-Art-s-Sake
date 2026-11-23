@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale-1">
+<title>A (Web)Zine for Art's Sake</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="page-4-styles.css">
+<script src=""></script>
+<style type="text/css">
+<!--
+BODY { cursor:url(https://www.rw-designer.com/cursor-set/next-generation-set); }
+-->
+</style>
+</head>
+<body onclick="handleClick(event)">
+    <div class="lecture" st>
+      <h3>
+        What is
+        <span id="greeting" class="greeting clickable head" data-values="Art? /a (Web)Zine?">a (Web)Zine?</span>
+      </h3>
+      <h6>
+        Lecture by Rabindranath Tagore | Edited/Translated by Shriya Chunduri
+      </h6>
+    </div>
+    <p>As a consequence of this, we have often heard it argued whether manner, rather than matter, is the essential element in art/a (web)zine. These discussions owe their origin to the idea that beauty is the object of art/a (web)zine, and, because mere matter cannot have the property of beauty, it becomes a question whether manner is not the principal factor in art/a (web)zine. But the truth is, analytical treatment will not help us in discovering what is the vital point in art/a (web)zine. For the true principle of art/a (web)zine is the principle of unity. Therefore we find all abstract ideas are out of place in true art/ (web)zines, where, in order to gain admission, they must come under the disguise of personification. Until they have done this, they are, for art/a (web)zine, like uncooked vegetables, unfit to be served at a feast. History, so long as it copies science and deals with abstractions, remains outside the domain of literature.</p>
+    <p>The world asks the inner man/being,—"Friend, have you seen me? Do you love me?—not as one who provides you with foods and fruits, not as one whose laws you have found out, but as one who is personal, individual?"</p>
+    <p>The artist's/(web)zinester's answer is, "Yes, I have seen you, I have loved and known you,—not that I have any need of you, not that I have taken you and used your laws for my own purposes of power. I know the forces that act and drive and lead to power, but it is not that. I see you, where you are what I am." But how do you know that the artist/(web)zinester has known, has seen, has come face to face with this Personality?</p>
+    <p> If you ask me to draw some particular tree, and I am no artist/(web)zinester, I try to copy every detail, lest I should otherwise lose the peculiarity of the tree, forgetting that the peculiarity is not the personality. But when the true artist/(web)zinester comes, he overlooks/they overlook all details and gets into the essential characterization. Our rational man/individual also seeks to simplify things into their inner principle; to get rid of the details; to get to the heart of things where things are One. But the difference is this,—the scientist seeks an impersonal principle of unification, which can be applied to all things.But the artist/(web)zinester finds out the unique, the individual, which yet is in the heart of the universal. It is the function of the artist/(web)zinester to particularize that one tree.</p>
+
+    <div id="b" class="unselect">
+        <button id="title"><a href="index.html">title</a></button>
+    </div>
+    <div id="b" class="unselect">
+        <button id="note"><a href="note.html">editor/translator's note</a></button>
+    </div>
+    <div id="b" class="unselect">
+        <button id="page-1"><a href="page-1.html">page 1</a></button>
+    </div>
+    <div id="b" class="unselect">
+        <button id="page-2"><a href="page-2.html">page 2</a></button>
+    </div>
+    <div id="b" class="unselect">
+        <button id="page-3"><a href="page-3.html">page 3</a></button>
+    </div>
+    <div id="b" class="unselect">
+        <button id="page-4"><a href="page-4.html">page 4</a></button>
+    </div>
+    <div id="b" class="unselect">
+        <button id="page-5"><a href="page-5.html">page 5</a></button>
+    </div>
+    <div id="b" class="unselect">
+        <button id="page-6"><a href="page-6.html">page 6</a></button>
+    </div>
+    <div id="b" class="unselect">
+        <button id="page-7"><a href="page-7.html">page 7</a></button>
+    </div>
+    <div id="b" class="unselect">
+        <button id="citations"><a href="citations.html">citations</a></button>
+    </div>
+    <div id="b" class="unselect printbutton">
+        <button id="p" onclick="window.print()">print</button>
+    </div>
+    <div id="b" class="unselect">
+        <button onClick="window.location.reload();" id="reset"><a href="">reset</a></button>
+    </div>
+
+<script>
+          function handleClick(event) {
+  if (event.target.classList.contains("clickable")) {
+    var values = event.target.getAttribute("data-values").split("/");
+    var randomIndex = Math.floor(Math.random() * values.length);
+    var nextValue = values[randomIndex];
+    event.target.innerText = nextValue;
+  }
+}
+
+</script>
+</body>
+
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale-1">
+<title>A (Web)Zine for Art's Sake</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="citations-styles.css">
+<script src=""></script>
+<style type="text/css">
+<!--
+BODY { cursor:url(https://www.rw-designer.com/cursor-set/next-generation-set); }
+-->
+</style>
+</head>
+<body onclick="handleClick(event)">
+    <div class="lecture" st>
+      <h3>
+        Citations
+      </h3>
+    </div>
+    <p>
+    </p>
+
+    <div id="b" class="unselect">
+        <button id="title"><a href="index.html">title</a></button>
+    </div>
+    <div id="b" class="unselect">
+        <button id="note"><a href="note.html">editor/translator's note</a></button>
+    </div>
+    <div id="b" class="unselect">
+        <button id="page-1"><a href="page-1.html">page 1</a></button>
+    </div>
+    <div id="b" class="unselect">
+        <button id="page-2"><a href="page-2.html">page 2</a></button>
+    </div>
+    <div id="b" class="unselect">
+        <button id="page-3"><a href="page-3.html">page 3</a></button>
+    </div>
+    <div id="b" class="unselect">
+        <button id="page-4"><a href="page-4.html">page 4</a></button>
+    </div>
+    <div id="b" class="unselect">
+        <button id="page-5"><a href="page-5.html">page 5</a></button>
+    </div>
+    <div id="b" class="unselect">
+        <button id="page-6"><a href="page-6.html">page 6</a></button>
+    </div>
+    <div id="b" class="unselect">
+        <button id="page-7"><a href="page-7.html">page 7</a></button>
+    </div>
+    <div id="b" class="unselect">
+        <button id="citations"><a href="citations.html">citations</a></button>
+    </div>
+    <div id="b" class="unselect printbutton">
+        <button id="p" onclick="window.print()">print</button>
+    </div>
+    <div id="b" class="unselect">
+        <button onClick="window.location.reload();" id="reset"><a href="">reset</a></button>
+    </div>
+
+<script>
+          function handleClick(event) {
+  if (event.target.classList.contains("clickable")) {
+    var values = event.target.getAttribute("data-values").split("/");
+    var randomIndex = Math.floor(Math.random() * values.length);
+    var nextValue = values[randomIndex];
+    event.target.innerText = nextValue;
+  }
+}
+
+</script>
+</body>
+
+</html>

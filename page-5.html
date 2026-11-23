@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale-1">
+<title>A (Web)Zine for Art's Sake</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="page-5-styles.css">
+<script src=""></script>
+<style type="text/css">
+<!--
+BODY { cursor:url(https://www.rw-designer.com/cursor-set/next-generation-set); }
+-->
+</style>
+</head>
+<body onclick="handleClick(event)">
+    <div class="lecture" st>
+      <h3>
+        What is
+        <span id="greeting" class="greeting clickable head" data-values="Art? /a (Web)Zine?">a (Web)Zine?</span>
+      </h3>
+      <h6>
+        Lecture by Rabindranath Tagore | Edited/Translated by Shriya Chunduri
+      </h6>
+    </div>
+    <p>The greatness and beauty of Oriental art/(web)zines, especially in Japan and China, consist in this, that there the artists/(web)zinesters have seen this soul of things and they believe in it. The West may believe in the soul of Man, but she does/they do not really believe that the universe has a soul. Yet this is the belief of the East, and the whole mental contribution of the East to mankind/beingkind is filled with this idea. So, we, in the East, need not go into details and emphasize them; for the most important thing is this universal soul, for which the Eastern sages have sat in meditation, and Eastern artists/(web)zinesters have joined them in artistic/(web)zine-tistic realization.</p>
+    <p>When we say that art/a (web)zine only deals with those truths that are personal, we do not exclude philosophical ideas which are apparently abstract. We have often heard the Indian mind described by Western critics as metaphysical, because it is ready to soar in the infinite. But it has to be noted that the infinite is not a mere matter of philosophical speculation to India; it is as real to her/them as the sunlight. She/They must see it, feel it, make use of it in her/their life. Therefore it has come out so profusely in her/their symbolism of worship, in her/their literature.</p>
+    <p>The classical literature of the ancient time was only peopled by saints and kings and heroes. It threw no light upon men/individuals who loved and suffered in obscurity. But as the illumination of man's/an individual's personality throws its light upon a wider space, penetrating into hidden corners, the world of art/(web)zines also crosses its frontiers and extends its boundaries into unexplored regions. Thus art/a (web)zine is signalizing man's/individual's conquest of the world by its symbols of beauty, springing up in spots which were barren of all voice and colours. It is supplying man/an individual with his banners, under which he marches/they march to fight against the inane and the inert, proving his/their living claims far and wide in God's creation. The darkness of the caves has yielded its stillness to man's/an individual's soul, and in exchange has secretly been crowned with the wreath of art/a (web)zine. This encroachment of man's/an individual's personality has no limit, and even the markets and factories of the present age, even the schools where children of man/an individual are imprisoned and jails where are the criminals, will be mellowed with the touch of art/a (web)zine, and lose their distinction of rigid discordance with life. And art/a (web)zine is like the spread of vegetation, to show how far man/an individual has reclaimed the desert for his/their own. </p>
+    <p>We have said before that where there is an element of the superfluous in our heart's relationship with the world, Art/a (Web)Zine has its birth. Therefore, though in its extensiveness it is more universal than any other passion, it is rejected by art/a (web)zine. It is like an immigrant coming to these Atlantic shores, who can show no cash balance in his/their favour.</p>
+
+    <div id="b" class="unselect">
+        <button id="title"><a href="index.html">title</a></button>
+    </div>
+    <div id="b" class="unselect">
+        <button id="note"><a href="note.html">editor/translator's note</a></button>
+    </div>
+    <div id="b" class="unselect">
+        <button id="page-1"><a href="page-1.html">page 1</a></button>
+    </div>
+    <div id="b" class="unselect">
+        <button id="page-2"><a href="page-2.html">page 2</a></button>
+    </div>
+    <div id="b" class="unselect">
+        <button id="page-3"><a href="page-3.html">page 3</a></button>
+    </div>
+    <div id="b" class="unselect">
+        <button id="page-4"><a href="page-4.html">page 4</a></button>
+    </div>
+    <div id="b" class="unselect">
+        <button id="page-5"><a href="page-5.html">page 5</a></button>
+    </div>
+    <div id="b" class="unselect">
+        <button id="page-6"><a href="page-6.html">page 6</a></button>
+    </div>
+    <div id="b" class="unselect">
+        <button id="page-7"><a href="page-7.html">page 7</a></button>
+    </div>
+    <div id="b" class="unselect">
+        <button id="citations"><a href="citations.html">citations</a></button>
+    </div>
+    <div id="b" class="unselect printbutton">
+        <button id="p" onclick="window.print()">print</button>
+    </div>
+    <div id="b" class="unselect">
+        <button onClick="window.location.reload();" id="reset"><a href="">reset</a></button>
+    </div>
+
+<script>
+          function handleClick(event) {
+  if (event.target.classList.contains("clickable")) {
+    var values = event.target.getAttribute("data-values").split("/");
+    var randomIndex = Math.floor(Math.random() * values.length);
+    var nextValue = values[randomIndex];
+    event.target.innerText = nextValue;
+  }
+}
+
+</script>
+</body>
+
+</html>

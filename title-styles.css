@@ -15,6 +15,17 @@ h3{
     color: aliceblue;
 }
 
+h6{
+    font-family: "Noto Sans", sans-serif;
+    font-size: 0.5lh;
+    font-weight: 200;
+    font-style: italic;
+    line-height: 1lh;
+    vertical-align: top;
+    color: aliceblue;
+    margin-top: -1lh;
+}
+
 p {
     color: white;
     font-family: "Noto Sans", sans-serif;
@@ -35,8 +46,18 @@ p {
   user-select: text; /* Standard syntax */
 }
 
+.head {
+  cursor: ew-resize;
+}
+
 .unselect {
     display: inline-block;
+}
+
+a, .button {
+    text-decoration: none;
+    color: blue;
+    cursor: copy;
 }
 
 #greeting:hover {
@@ -44,12 +65,13 @@ p {
 }
 
 @media print {
-  @page { size: 80mm auto; margin: 0; }
+  @page { size: 80mm auto; margin: 20%; }
 
   html {
-    width: 80mm !important;
+    width: 8.5in !important;
     height: auto !important;
     display: block !important;
+    color: #000 !important;
     background: #fff !important;
     overflow: visible !important;
   }
@@ -57,17 +79,19 @@ p {
   body {
     display: block !important;
     position: static !important;
-    width: 72mm !important;
-    margin: 0 auto !important;
+    width: 7in !important;
+    margin: 10%  !important;
+    color: #000 !important;
     background: #fff !important;
     font-size: 12px !important;
   }
 
-  #g, #g * {
-    color: #000 !important;
-    -webkit-text-fill-color: #000 !important;
-    background: transparent !important;
-    text-shadow: none !important;
-    visibility: visible !important;
-  }
+h3, p, .unselect, a{
+    color: #000;
+    text-decoration: none;
+}
+
+.clickable {
+    color: #000;
+}
 }
