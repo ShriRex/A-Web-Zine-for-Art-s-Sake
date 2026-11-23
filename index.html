@@ -12,12 +12,16 @@
 
 <body onclick="handleClick(event)">
     <div class="main">
-      <h3>
+        <img src="zine images/zine-image-1.jpg" name="flip" 
+        BORDER="0">
+        <div class="heading">
+        <h3>
         <span id="greeting" class="greeting clickable head" data-values="Art/A (Web)Zine">A (Web)Zine</span>
         for
         <span id="greeting" class="greeting clickable head" data-values="Art's/a (Web)Zine's">Art's</span>
         Sake
-      </h3>
+        </h3>
+      </div>       
     </div>
 
     <div id="b" class="unselect">
@@ -65,6 +69,38 @@ function handleClick(event) {
     event.target.innerText = nextValue;
   }
 }
+
+var img = []
+img[0] = "zine images/zine-image-1.jpg";
+img[1] = "zine images/zine-image-2.jpg";
+img[2] = "zine images/zine-image-3.jpg";
+img[3] = "zine images/zine-image-4.jpg";
+img[4] = "zine images/zine-image-5.jpg";
+img[5] = "zine images/zine-image-6.jpg";
+img[6] = "zine images/zine-image-7.jpg";
+img[7] = "zine images/zine-image-8.jpg";
+img[8] = "zine images/zine-image-9.jpg";
+img[9] = "zine images/zine-image-10.jpg";
+
+var images = document.querySelectorAll('[name=flip]');
+
+for(var i=0; i < images.length; i++)
+{
+  var image = images[i];
+  image.addEventListener('click', imageClicked(), false);
+}
+
+function imageClicked() {
+            var counter = 0;
+            
+return function(event)
+  {
+    counter++;
+    this.src = img[counter];
+  }        }
+
+
+
 
 </script>
 </body>
