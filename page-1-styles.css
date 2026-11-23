@@ -67,7 +67,7 @@ a, .button {
     color: blue;
 }
 
-.open:active {
+.button:active {
     text-decoration: underline;
     color: orangered;
 }
