@@ -126,13 +126,13 @@
   </p>
 
     <div id="b" class="unselect">
-        <button id="image"><a href="index.html">title</a></button>
+        <button class="open" id="image"><a href="index.html">title</a></button>
     </div>
     <div id="b" class="unselect">
-        <button id="note">editor/translator's note</button>
+        <button class="open" id="note"><a href="">editor/translator's note</a></button>
     </div>
     <div id="b" class="unselect">
-        <button id="page-1"><a href="page-1.html">page 1</a></button>
+        <button class="open" id="page-1"><a href="" class="open">page 1</a></button>
     </div>
     <div id="b" class="unselect">
         <button id="page-2"><a href="">page 2</a></button>
@@ -156,13 +156,13 @@
         <button id="page-8"><a href="">page 8</a></button>
     </div>
     <div id="b" class="unselect">
-        <button id="citations">citations</button>
+        <button id="citations"><a href="">citations</a></button>
     </div>
     <div id="b" class="unselect printbutton">
         <button id="p" onclick="kioskOrBrowserPrint();">print</button>
     </div>
     <div id="b" class="unselect">
-        <button id="reset">reset</button>
+        <button onClick="window.location.reload();" id="reset"><a href="">reset</a></button>
     </div>
 
 <script>
@@ -200,6 +200,11 @@ let printing = false;
         }
         printing = false;   // only unlock if we're not reloading
       }
+
+--
+$('.open').click(function() {
+    $(this).toggleClass('active');
+});
       
 </script>
 </body>

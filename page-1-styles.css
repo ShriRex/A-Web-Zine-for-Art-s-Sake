@@ -57,8 +57,19 @@ p {
     text-decoration: underline;
 }
 
+
 .unselect {
     display: inline-block;
+}
+
+a {
+    text-decoration: none;
+    color: blue;
+}
+
+.open:active {
+    text-decoration: underline;
+    color: orangered;
 }
 
 @media print {
