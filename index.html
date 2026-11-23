@@ -12,17 +12,14 @@
 
 <body onclick="handleClick(event)">
     <div class="main">
-        <img src="zine images/zine-image-1.jpg" name="flip" 
-        BORDER="0">
+       <button class="archive-images"><img src="zine images/zine-image-1.jpg" class="archive" name="flip">
         <span id="greeting" class="greeting clickable head" data-values="Art/A (Web)Zine">A (Web)Zine</span>
-        <div class="heading">
-        <h3>
+        </button> 
+        <p>for</p> 
+        <button class="archive-images"><img src="art images/art-image-01.jpeg" class="archive" name="flipped">
         <span id="greeting" class="greeting clickable head" data-values="Art/A (Web)Zine">A (Web)Zine</span>
-        for
-        <span id="greeting" class="greeting clickable head" data-values="Art's/a (Web)Zine's">Art's</span>
-        Sake
-        </h3>
-      </div>       
+        </button>  
+        <p>sake</p>
     </div>
 
     <div id="b" class="unselect">
@@ -97,7 +94,34 @@ function imageClicked()
   return function(event)
   {
     counter++;
-    this.src = img[counter % img.length];
+    this.src = img[counter];
+  }
+}
+
+var img = []
+img[10] = "art images/art-image-01.jpeg";
+img[11] = "art images/art-image-02.jpeg";
+img[12] = "art images/art-image-03.jpeg";
+img[13] = "art images/art-image-04.jpeg";
+img[14] = "art images/art-image-05.jpeg";
+img[15] = "art images/art-image-06.jpeg";
+
+
+
+var images = document.querySelectorAll('[name=flipped]');
+
+for(var i=0; i < images.length; i++)
+{
+  var image = images[i];
+  image.addEventListener('click', imageClicked(), false);
+}
+
+function imageClicked()
+{   var counter = 0;
+  return function(event)
+  {
+    counter++;
+    this.src = img[counter];
   }
 }
 
