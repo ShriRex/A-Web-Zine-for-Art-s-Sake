@@ -62,12 +62,17 @@ p {
     display: inline-block;
 }
 
-a {
+a, .button {
     text-decoration: none;
     color: blue;
 }
 
 .open:active {
+    text-decoration: underline;
+    color: orangered;
+}
+
+a:active {
     text-decoration: underline;
     color: orangered;
 }
