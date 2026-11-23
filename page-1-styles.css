@@ -67,15 +67,6 @@ a, .button {
     color: blue;
 }
 
-.button:active {
-    text-decoration: underline;
-    color: orangered;
-}
-
-a:active {
-    text-decoration: underline;
-    color: orangered;
-}
 
 @media print {
   @page { size: 80mm auto; margin: 20%; }
