@@ -16,40 +16,22 @@
         <span id="greeting" class="greeting clickable head" data-values="Art/A (Web)Zine">A (Web)Zine</span>
         </button> 
         <p>for</p> 
-        <button class="archive-images"><img src="art images/art-image-01.jpeg" class="archive" name="flipped">
+        <button class="archive-images"><img src="art images/art-image-01.jpeg" class="archive" name="flip">
         <span id="greeting" class="greeting clickable head" data-values="Art/A (Web)Zine">A (Web)Zine</span>
         </button>  
         <p>sake</p>
     </div>
 
     <div id="b" class="unselect">
-        <button id="title"><a href="index.html">title</a></button>
-    </div>
-    <div id="b" class="unselect">
-        <button id="note"><a href="note.html">editor/translator's note</a></button>
-    </div>
-    <div id="b" class="unselect">
+        <button id="title" class="unselect"><a href="index.html" aria-current="page">title</a></button>
+        <button id="note"><a href="note.html" aria-current="false">editor/translator's note</a></button>
         <button id="page-1"><a href="page-1.html">page 1</a></button>
-    </div>
-    <div id="b" class="unselect">
         <button id="page-2"><a href="page-2.html">page 2</a></button>
-    </div>
-    <div id="b" class="unselect">
         <button id="page-3"><a href="page-3.html">page 3</a></button>
-    </div>
-    <div id="b" class="unselect">
         <button id="page-4"><a href="page-4.html">page 4</a></button>
-    </div>
-    <div id="b" class="unselect">
         <button id="page-5"><a href="page-5.html">page 5</a></button>
-    </div>
-    <div id="b" class="unselect">
         <button id="page-6"><a href="page-6.html">page 6</a></button>
-    </div>
-    <div id="b" class="unselect">
         <button id="page-7"><a href="page-7.html">page 7</a></button>
-    </div>
-    <div id="b" class="unselect">
         <button id="citations"><a href="citations.html">citations</a></button>
     </div>
     <div id="b" class="unselect printbutton">
@@ -70,10 +52,10 @@ function handleClick(event) {
 }
 
 var img = []
-img[0] = "zine images/zine-image-1.jpg";
-img[1] = "zine images/zine-image-2.jpg";
-img[2] = "zine images/zine-image-3.jpg";
-img[3] = "zine images/zine-image-4.jpg";
+img[0] = "zine-image-1.jpg";
+img[1] = "zine-image-2.jpg";
+img[2] = "zine-image-3.jpg";
+img[3] = "zine-image-4.jpg";
 img[4] = "zine images/zine-image-5.jpg";
 img[5] = "zine images/zine-image-6.jpg";
 img[6] = "zine images/zine-image-7.jpg";
@@ -93,33 +75,12 @@ var images = document.querySelectorAll('[name=flip]');
 for(var i=0; i < images.length; i++)
 {
   var image = images[i];
-  image.addEventListener('click', imageClicked(), false);
-}
-
-function imageClicked()
-{   var counter = 0;
-  return function(event)
-  {
-    counter++;
-    this.src = img[counter];
-  }
-}
-
-var images = document.querySelectorAll('[name=flipped]');
-
-for(var i=0; i < images.length; i++)
-{
-  var image = images[i];
-  image.addEventListener('click', imageClicked(), false);
-}
-
-function imageClicked()
-{   var counter = 0;
-  return function(event)
-  {
-    counter++;
-    this.src = img[counter];
-  }
+  image.addEventListener('click',() => {
+    var counter = 0;
+    var randomImage = images[Math.floor(Math.random()) * images.length];
+    img.src = randomImage;
+    console.log(randomImage);
+})
 }
 
 

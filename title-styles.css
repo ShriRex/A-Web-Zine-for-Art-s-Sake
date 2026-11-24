@@ -76,11 +76,7 @@ p {
     vertical-align: middle;
 }
 
-.unselect {
-  -webkit-user-select: none; /* Safari */
-  -ms-user-select: none; /* IE 10 and IE 11 */
-  user-select: none; /* Standard syntax */
-}
+
 
 .select {
   -webkit-user-select: text; /* Safari */
@@ -88,12 +84,17 @@ p {
   user-select: text; /* Standard syntax */
 }
 
+[aria-current]:not([aria-current="false"]) {
+  font-weight: bold;
+  text-decoration: underline;
+}
 
-.unselect {
-    display: inline-block;
+.unselect:active {
+  text-decoration: underline;
 }
 
 a, .button {
+    display: inline-block;
     text-decoration: none;
     color: blue;
     cursor: copy;
