@@ -5,18 +5,25 @@ html {
 body {
     background-color: black;
     margin: 10%;
+    overflow: hidden;
 }
 
 .main {
-  display: flex;
-  align-items: center;
-
+  display: inline-block;
 }
 
-.heading {
-  position: absolute;
-  bottom: 10%;
-  left:10%;
+.head {
+  margin: auto;
+}
+
+.header {
+  text-align: center;
+  vertical-align: baseline;
+  font-size: 2lh;
+  line-height: 2lh;
+  color: black;
+  z-index: 25;
+  cursor: ew-resize;
 }
 
 .archive {
@@ -30,11 +37,6 @@ body {
   border: none;
 }
 
-.head {
-  cursor: ew-resize;
-  color: #fff;
-  position: relative;
-}
 
 img {
   height: 40lh;

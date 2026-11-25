@@ -12,14 +12,11 @@
 
 <body onclick="handleClick(event)">
     <div class="main">
-       <button class="archive-images"><img src="zine images/zine-image-1.jpg" class="archive" name="flip">
-        <span id="greeting" class="greeting clickable head" data-values="Art/A (Web)Zine">A (Web)Zine</span>
-        </button> 
-        <p>for</p> 
-        <button class="archive-images"><img src="art images/art-image-01.jpeg" class="archive" name="flip">
-        <span id="greeting" class="greeting clickable head" data-values="Art/A (Web)Zine">A (Web)Zine</span>
-        </button>  
-        <p>sake</p>
+            <button id="btn" class="head"><img id="random-image" src="" alt="">                   <p class="header"><span id="greeting" class="greeting clickable titular" data-values="Art for/A (Web)Zine for">A (Web)Zine for</span></p>
+            </button>
+            <button id="btn2" class="head"><img id="random-image2" src="" alt="">                   
+            <p class="header"><span id="greeting" class="greeting clickable titular" data-values="Art's Sake/a (Web)Zine's Sake">Art's Sake</span></p>
+            </button>
     </div>
 
     <div id="b" class="unselect">
@@ -47,34 +44,54 @@ function handleClick(event) {
   }
 }
 
-var img = ["zine-image-1.jpg", "zine-image-2.jpg"]
-img[2] = "zine-image-3.jpg";
-img[3] = "zine-image-4.jpg";
-img[4] = "zine-image-5.jpg";
-img[5] = "zine-image-6.jpg";
-img[6] = "zine images/zine-image-7.jpg";
-img[7] = "zine images/zine-image-8.jpg";
-img[8] = "zine images/zine-image-9.jpg";
-img[9] = "zine images/zine-image-10.jpg";
-img[10] = "art images/art-image-01.jpeg";
-img[11] = "art images/art-image-02.jpeg";
-img[12] = "art images/art-image-03.jpeg";
-img[13] = "art images/art-image-04.jpeg";
-img[14] = "art images/art-image-05.jpeg";
-img[15] = "art images/art-image-06.jpeg";
+const imgEl = document.getElementById('random-image');
+const btn = document.getElementById('btn');
 
+const srcArray = ['zine images/zine-image-1.jpg', 'zine images/zine-image-2.jpg','zine images/zine-image-3.jpg','zine images/zine-image-4.jpg', 'zine images/zine-image-5.jpg','zine images/zine-image-6.jpg','zine images/zine-image-7.jpg', 'zine images/zine-image-8.jpg','zine images/zine-image-9.jpg'];
 
-var images = document.querySelectorAll('[name=flip]');
+imgEl.src - srcArray[0];
 
-for(var i=0; i < images.length; i++)
-{
-  var image = images[i];
-  image.addEventListener('click',() => {
-    var counter = 0;
-    var randomImage = images[Math.floor(Math.random()) * images.length];
-    img.src = randomImage;
-    console.log(randomImage);
-})
+btn.addEventListener('click', () => {
+    randomImage();
+});
+
+let index;
+
+randomImage();
+function randomImage() {
+    const randomIndex = Math.floor(Math.random()*srcArray.length);
+    if (randomIndex !== index){
+    imgEl.src = srcArray[randomIndex];
+    index = randomImage;
+    } else {
+    randomImage();
+    }
+    
+}
+
+const imgEl2 = document.getElementById('random-image2');
+const btn2 = document.getElementById('btn2');
+
+const srcArray2 = ['zine images/zine-image-1.jpg', 'zine images/zine-image-2.jpg','zine images/zine-image-3.jpg','zine images/zine-image-4.jpg', 'zine images/zine-image-5.jpg','zine images/zine-image-6.jpg','zine images/zine-image-7.jpg', 'zine images/zine-image-8.jpg','zine images/zine-image-9.jpg','art images/art-image-01.jpeg','art images/art-image-02.jpeg','art images/art-image-03.jpeg','art images/art-image-04.jpeg','art images/art-image-05.jpeg','art images/art-image-06.jpeg'];
+
+imgEl2.src - srcArray2[0];
+
+btn2.addEventListener('click', () => {
+    randomImage2();
+});
+
+let index2;
+
+randomImage2();
+function randomImage2() {
+    const randomIndex2 = Math.floor(Math.random()*srcArray2.length);
+    if (randomIndex2 !== index2){
+    imgEl2.src = srcArray2[randomIndex2];
+    index2 = randomImage2;
+    } else {
+    randomImage2();
+    }
+    
 }
 
 
