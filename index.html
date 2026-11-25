@@ -25,20 +25,16 @@
     <div id="b" class="unselect">
         <button id="title" class="unselect"><a href="index.html" aria-current="page">title</a></button>
         <button id="note"><a href="note.html" aria-current="false">editor/translator's note</a></button>
-        <button id="page-1"><a href="page-1.html">page 1</a></button>
-        <button id="page-2"><a href="page-2.html">page 2</a></button>
-        <button id="page-3"><a href="page-3.html">page 3</a></button>
-        <button id="page-4"><a href="page-4.html">page 4</a></button>
-        <button id="page-5"><a href="page-5.html">page 5</a></button>
-        <button id="page-6"><a href="page-6.html">page 6</a></button>
-        <button id="page-7"><a href="page-7.html">page 7</a></button>
-        <button id="citations"><a href="citations.html">citations</a></button>
-    </div>
-    <div id="b" class="unselect printbutton">
-        <button id="p" onclick="window.print()">print</button>
-    </div>
-    <div id="b" class="unselect">
-        <button onClick="window.location.reload();" id="reset"><a href="">reset</a></button>
+        <button id="page-1"><a href="page-1.html" aria-current="false">page 1</a></button>
+        <button id="page-2"><a href="page-2.html" aria-current="false">page 2</a></button>
+        <button id="page-3"><a href="page-3.html" aria-current="false">page 3</a></button>
+        <button id="page-4"><a href="page-4.html" aria-current="false">page 4</a></button>
+        <button id="page-5"><a href="page-5.html" aria-current="false">page 5</a></button>
+        <button id="page-6"><a href="page-6.html" aria-current="false">page 6</a></button>
+        <button id="page-7"><a href="page-7.html" aria-current="false">page 7</a></button>
+        <button id="citations"><a href="citations.html" aria-current="false">citations</a></button>
+        <button class="printbutton" id="p" onclick="window.print()"><a href="" aria-current="false">print</a></button>
+        <button onClick="window.location.reload();" id="reset"><a href="" aria-current="false">reset</a></button>
     </div>
 
 <script>
@@ -51,13 +47,11 @@ function handleClick(event) {
   }
 }
 
-var img = []
-img[0] = "zine-image-1.jpg";
-img[1] = "zine-image-2.jpg";
+var img = ["zine-image-1.jpg", "zine-image-2.jpg"]
 img[2] = "zine-image-3.jpg";
 img[3] = "zine-image-4.jpg";
-img[4] = "zine images/zine-image-5.jpg";
-img[5] = "zine images/zine-image-6.jpg";
+img[4] = "zine-image-5.jpg";
+img[5] = "zine-image-6.jpg";
 img[6] = "zine images/zine-image-7.jpg";
 img[7] = "zine images/zine-image-8.jpg";
 img[8] = "zine images/zine-image-9.jpg";

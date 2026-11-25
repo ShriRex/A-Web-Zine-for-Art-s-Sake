@@ -47,7 +47,9 @@ p {
   user-select: text; /* Standard syntax */
 }
 
-.clickable {
+[aria-current]:not([aria-current="false"]) {
+  font-weight: bold;
+  text-decoration: underline;
 }
 
 .head {
@@ -109,11 +111,25 @@ a, .button {
 
 h3, p, .unselect, a{
     color: #000;
-    text-decoration: none;
 }
 
 .clickable {
     color: #000;
+}
+
+.creativity {
+    text-decoration: underline;
+    text-decoration-style: wavy;
+}
+
+.gender {
+    text-decoration: underline;
+    text-decoration-style: dashed;
+}
+
+.language {
+    text-decoration: underline;
+    text-decoration-style: dotted;
 }
 }
 

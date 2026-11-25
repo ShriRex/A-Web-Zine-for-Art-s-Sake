@@ -76,7 +76,11 @@ p {
     vertical-align: middle;
 }
 
-
+.unselect {
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
 
 .select {
   -webkit-user-select: text; /* Safari */
@@ -86,10 +90,6 @@ p {
 
 [aria-current]:not([aria-current="false"]) {
   font-weight: bold;
-  text-decoration: underline;
-}
-
-.unselect:active {
   text-decoration: underline;
 }
 
@@ -129,11 +129,25 @@ a, .button {
 
 h3, p, .unselect, a{
     color: #000;
-    text-decoration: none;
 }
 
 .clickable {
     color: #000;
+}
+
+.creativity {
+    text-decoration: underline;
+    text-decoration-style: wavy;
+}
+
+.gender {
+    text-decoration: underline;
+    text-decoration-style: dashed;
+}
+
+.language {
+    text-decoration: underline;
+    text-decoration-style: dotted;
 }
 }
 
