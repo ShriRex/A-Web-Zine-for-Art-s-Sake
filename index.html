@@ -19,20 +19,20 @@
             </button>
     </div>
 
-    <div id="b" class="unselect">
-        <button id="title" class="unselect"><a href="index.html" aria-current="page">title</a></button>
-        <button id="note"><a href="note.html" aria-current="false">editor/translator's note</a></button>
-        <button id="page-1"><a href="page-1.html" aria-current="false">page 1</a></button>
-        <button id="page-2"><a href="page-2.html" aria-current="false">page 2</a></button>
-        <button id="page-3"><a href="page-3.html" aria-current="false">page 3</a></button>
-        <button id="page-4"><a href="page-4.html" aria-current="false">page 4</a></button>
-        <button id="page-5"><a href="page-5.html" aria-current="false">page 5</a></button>
-        <button id="page-6"><a href="page-6.html" aria-current="false">page 6</a></button>
-        <button id="page-7"><a href="page-7.html" aria-current="false">page 7</a></button>
-        <button id="citations"><a href="citations.html" aria-current="false">citations</a></button>
-        <button class="printbutton" id="p" onclick="window.print()"><a href="" aria-current="false">print</a></button>
-        <button onClick="window.location.reload();" id="reset"><a href="" aria-current="false">reset</a></button>
-    </div>
+       <nav id="b" class="unselect">
+        <button id="title" class="navoption"><a href="index.html" aria-current="page">title</a></button>
+        <button id="citations" class="navoption"><a href="note.html" aria-current="false">notes</a></button>
+        <button id="page" class="navoption"><a href="page-1.html" aria-current="false">(1/7)</a></button>
+        <button id="page" class="navoption"><a href="page-2.html" aria-current="false">(2/7)</a></button>
+        <button id="page" class="navoption"><a href="page-3.html" aria-current="false">(3/7)</a></button>
+        <button id="page" class="navoption"><a href="page-4.html" aria-current="false">(4/7)</a></button>
+        <button id="page" class="navoption"><a href="page-5.html" aria-current="false">(5/7)</a></button>
+        <button id="page" class="navoption"><a href="page-6.html" aria-current="false">(6/7)</a></button>
+        <button id="page" class="navoption"><a href="page-7.html" aria-current="false">(7/7)</a></button>
+        <button id="citations" class="navoption"><a href="citations.html" aria-current="false">citations</a></button>
+        <button class="printbutton navoption" id="print" onclick="window.print()"><a href="" aria-current="false">print</a></button>
+        <button class="navoption" onClick="window.location.reload();" id="reset"><a href="" aria-current="false">reset</a></button>
+    </nav>
 
 <script>
 function handleClick(event) {
