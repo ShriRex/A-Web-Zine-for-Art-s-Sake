@@ -1,5 +1,7 @@
 html {
   font-family: "Noto Sans", sans-serif;
+  scroll-behavior: smooth;
+  scrollbar-gutter: hidden;
 }
 
 ::-webkit-scrollbar {
@@ -12,41 +14,37 @@ body {
 }
 
 .main {
-  display: inline-flex;
+  display: flex;
   flex-direction: row;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   justify-content: center;
-  justify-content: space-evenly;
-  align-items: flex-end;
-  width: 70lvh;
-  padding-left: 1%;
-  padding-right: 1%;
-  padding-top: 2%;
-  padding-bottom: 1%;
-  background-color: white;
+  align-items: center;
+  background-color: blue;
+  margin: 10%;
 }
 
 .head {
-  color: #fff;
-  background-color: white;
+  background-color: transparent;
   border: none;
 }
 
 .header {
   text-align: center;
-  font-size: 2lvh;
-  line-height: 2lvh;
-  color: black;
+  font-size: 3.5vmin;
+  line-height: 5vmin;
+  color: greenyellow;
   cursor: ew-resize;
 }
 
 
 img {
   height: auto;
-  width: 30lvh;
-  min-width: 10lvh;
-  display: block;
+  width: 55vmin;
+  display: flex;
+  align-self: center;
+  mix-blend-mode: difference;
 }
+
 
 img:hover
 {
@@ -56,31 +54,38 @@ img:hover
 
 
 h3{
-    font-family: "Noto Sans", sans-serif;
-    font-size: 1lh;
-    line-height: 1.5lh;
+    font-family: "Rethink Sans", sans-serif;
+    font-size: 14vmin;
+    line-height: 14vmin;
     vertical-align: top;
     color: aliceblue;
+    overflow: visible;
+    margin-left: 10%;
+    margin-top: 10%;
+
 }
 
 h6{
-    font-family: "Noto Sans", sans-serif;
-    font-size: 0.5lh;
-    font-weight: 200;
+    font-family: "Rethink Sans", sans-serif;
+    font-size: 4.5vmin;
     font-style: italic;
-    line-height: 0.5lh;
+    line-height: 5.75vmin;
+    font-weight: 200;
     vertical-align: top;
     color: aliceblue;
-    margin-top: -1lh;
-}
+    margin-top: -12vmin;
+    margin-left: 10%;
 
+}
 
 p {
     color: white;
-    font-family: "Noto Sans", sans-serif;
-    font-size: 0.75lh;
-    line-height: 1lh;
+    font-family: "Rethink Sans", sans-serif;
+    font-size: 8.25vmin;
+    line-height: 10vmin;
     vertical-align: middle;
+    letter-spacing: 0.01lh;
+    margin: 0.5%;
 }
 
 .unselect {
@@ -100,10 +105,54 @@ p {
   text-decoration: underline;
 }
 
+
+.unselect {
+    position: sticky;
+    left: 0;
+    bottom: 0;
+    z-index: 100;
+    display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex-flow: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+
+}
+
+
+.navoption {
+    width: 100%;
+}
+
+#title {
+    background-color: yellow;
+}
+
+#page {
+    background-color: magenta;
+}
+
+#citations {
+    background-color: greenyellow;
+}
+
+#print, #reset {
+    background-color: rgb(0, 255, 229);
+}
+
+button {
+    background: none;
+}
+
 a, .button {
-    display: inline-block;
-    text-decoration: none;
+  font-family: "Rethink Sans", sans-serif;
+    font-size: 1.75vmin;
     color: blue;
+    line-height: 3vmin;
+    text-align: center;
+    text-decoration: none;
     cursor: copy;
 }
 
@@ -113,7 +162,7 @@ a, .button {
 
 
 @media print {
-  @page { size: 80mm auto; margin: 20%; }
+  @page { size: 80mm auto; }
 
   html {
     width: 8.5in !important;
@@ -128,7 +177,6 @@ a, .button {
     display: block !important;
     position: static !important;
     width: 7in !important;
-    margin: 10%;
     color: #000 !important;
     background: #fff !important;
     font-size: 12px !important;
@@ -141,8 +189,26 @@ h3, p, .unselect, a{
 .main {
   width: 7in;
   background-color: #fff;
+  display: inline-flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   border: #000;
+  border-radius: 2%;
   border-style: dotted;
+}
+
+.header {
+  font-size: 16px;
+  line-height: 18px;
+  color: #000;
+}
+
+img {
+  min-width: 2in;
+  width: auto;
+  height: auto;
+  max-height: 3in;
+  filter: grayscale(100%);
 }
 
 }

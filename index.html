@@ -5,17 +5,16 @@
 <title>A (Web)Zine for Art's Sake</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Akaya+Telivigala&family=Amita:wght@400;700&family=Anek+Kannada:wdth@89.7&family=Anek+Latin:wght@100..800&family=Averia+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Codystar:wght@300;400&family=Rethink+Sans:ital,wght@0,400..800;1,400..800&family=Tiro+Bangla:ital@0;1&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="title-styles.css">
-<script src="https://cdn.jsdelivr.net/npm/fluoro-riso" defer></script>
+<script src=""></script>
 </head>
 
 <body onclick="handleClick(event)">
     <div class="main">
-            <button id="btn" class="head"><img id="random-image" src="" alt="">                   <p class="header"><span id="greeting" class="greeting clickable titular" data-values="Art for/A (Web)Zine for">A (Web)Zine for</span></p>
-            </button>
+            <button id="btn" class="head"><img id="random-image" src="" alt="">                  
+            </button><p class="header"><span id="greeting" class="greeting clickable titular" data-values="Art for Art's Sake/A (Web)Zine for a (Web)Zine's Sake/Art for a (Web)Zine's Sake">A (Web)Zine for Art's Sake</span></p>
             <button id="btn2" class="head"><img id="random-image2" src="" alt="">                   
-            <p class="header"><span id="greeting" class="greeting clickable titular" data-values="Art's Sake/a (Web)Zine's Sake">Art's Sake</span></p>
             </button>
     </div>
 
@@ -47,7 +46,42 @@ function handleClick(event) {
 const imgEl = document.getElementById('random-image');
 const btn = document.getElementById('btn');
 
-const srcArray = ['zine images/zine-image-1.jpg', 'zine images/zine-image-2.jpg','zine images/zine-image-3.jpg','zine images/zine-image-4.jpg', 'zine images/zine-image-5.jpg','zine images/zine-image-6.jpg','zine images/zine-image-7.jpg', 'zine images/zine-image-8.jpg','zine images/zine-image-9.jpg','art images/art-image-01.jpeg','art images/art-image-02.jpeg','art images/art-image-03.jpeg','art images/art-image-04.jpeg','art images/art-image-05.jpeg','art images/art-image-06.jpeg'];
+const srcArray = [
+'zine images/zine-image-1.jpg',
+'zine images/zine-image-2.jpg',
+'zine images/zine-image-3.jpg',
+'zine images/zine-image-4.jpg', 
+'zine images/zine-image-5.jpg',
+'zine images/zine-image-6.jpg',
+'zine images/zine-image-7.jpg', 
+'zine images/zine-image-8.jpg',
+'zine images/zine-image-9.jpg',
+'zine images/zine-image-10.jpg',
+'zine images/zine-image-11.jpg', 
+'zine images/zine-image-12.jpg',
+'zine images/zine-image-13.jpg',
+'zine images/zine-image-14.jpg', 
+'zine images/zine-image-15.jpg',
+'zine images/zine-image-16.jpg',
+'zine images/zine-image-17.jpg', 
+'zine images/zine-image-18.jpg',
+'zine images/zine-image-19.jpg',
+'zine images/zine-image-20.jpg',
+'zine images/zine-image-21.jpg', 
+'zine images/zine-image-22.jpg',
+'zine images/zine-image-23.jpg',
+'zine images/zine-image-24.jpg', 
+'zine images/zine-image-25.jpg',
+'zine images/zine-image-26.jpg',
+'zine images/zine-image-27.jpg', 
+'zine images/zine-image-28.jpg',
+'zine images/zine-image-29.jpg',
+'art images/art-image-01.jpeg',
+'art images/art-image-02.jpeg',
+'art images/art-image-03.jpeg',
+'art images/art-image-04.jpeg',
+'art images/art-image-05.jpeg',
+'art images/art-image-06.jpeg'];
 
 imgEl.src - srcArray[0];
 
@@ -72,7 +106,41 @@ function randomImage() {
 const imgEl2 = document.getElementById('random-image2');
 const btn2 = document.getElementById('btn2');
 
-const srcArray2 = ['zine images/zine-image-1.jpg', 'zine images/zine-image-2.jpg','zine images/zine-image-3.jpg','zine images/zine-image-4.jpg', 'zine images/zine-image-5.jpg','zine images/zine-image-6.jpg','zine images/zine-image-7.jpg', 'zine images/zine-image-8.jpg','zine images/zine-image-9.jpg','art images/art-image-01.jpeg','art images/art-image-02.jpeg','art images/art-image-03.jpeg','art images/art-image-04.jpeg','art images/art-image-05.jpeg','art images/art-image-06.jpeg'];
+const srcArray2 = ['zine images/zine-image-1.jpg',
+'zine images/zine-image-2.jpg',
+'zine images/zine-image-3.jpg',
+'zine images/zine-image-4.jpg',
+'zine images/zine-image-5.jpg',
+'zine images/zine-image-6.jpg',
+'zine images/zine-image-7.jpg',
+'zine images/zine-image-8.jpg',
+'zine images/zine-image-9.jpg',
+'zine images/zine-image-10.jpg',
+'zine images/zine-image-11.jpg', 
+'zine images/zine-image-12.jpg',
+'zine images/zine-image-13.jpg',
+'zine images/zine-image-14.jpg', 
+'zine images/zine-image-15.jpg',
+'zine images/zine-image-16.jpg',
+'zine images/zine-image-17.jpg', 
+'zine images/zine-image-18.jpg',
+'zine images/zine-image-19.jpg',
+'zine images/zine-image-20.jpg',
+'zine images/zine-image-21.jpg', 
+'zine images/zine-image-22.jpg',
+'zine images/zine-image-23.jpg',
+'zine images/zine-image-24.jpg', 
+'zine images/zine-image-25.jpg',
+'zine images/zine-image-26.jpg',
+'zine images/zine-image-27.jpg', 
+'zine images/zine-image-28.jpg',
+'zine images/zine-image-29.jpg',
+'art images/art-image-01.jpeg',
+'art images/art-image-02.jpeg',
+'art images/art-image-03.jpeg',
+'art images/art-image-04.jpeg',
+'art images/art-image-05.jpeg',
+'art images/art-image-06.jpeg]',];
 
 imgEl2.src - srcArray2[0];
 

@@ -10,9 +10,6 @@ html {
 
 body {
     background-color: blue;
-    background-image: url(zine\ images/zine-image-10.jpg), url(zine\ images/zine-image-1.jpg), url(zine\ images/zine-image-10.jpg);
-    background-blend-mode: color-burn;
-    background-attachment: scroll;
     margin: 0;
 }
 
@@ -52,12 +49,6 @@ p {
     margin: 10%;
     hyphens: manual;
 }
-
-.line {
-    margin-left: 10%;
-    margin-right: 10%;
-}
-
 
 .unselect {
   -webkit-user-select: none; /* Safari */
