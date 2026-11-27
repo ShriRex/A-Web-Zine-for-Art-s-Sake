@@ -1,39 +1,65 @@
 html {
   font-family: "Noto Sans", sans-serif;
+  scroll-behavior: smooth;
+  scrollbar-gutter: hidden;
 }
+
+::-webkit-scrollbar {
+    width: 0;
+}
+
+
 
 body {
-    background-color: black;
-    margin: 10%;
+    background-color: blue;
+    background-image: url(zine\ images/zine-image-10.jpg), url(zine\ images/zine-image-1.jpg), url(zine\ images/zine-image-10.jpg);
+    background-blend-mode: color-burn;
+    background-attachment: scroll;
+    margin: 0;
 }
 
+
 h3{
-    font-family: "Noto Sans", sans-serif;
-    font-size: 1lh;
-    line-height: 1.5lh;
+    font-family: "Rethink Sans", sans-serif;
+    font-size: 14vmin;
+    line-height: 14vmin;
     vertical-align: top;
     color: aliceblue;
+    overflow: visible;
+    margin-left: 10%;
+    margin-top: 10%;
+
 }
 
 h6{
-    font-family: "Noto Sans", sans-serif;
-    font-size: 0.5lh;
-    font-weight: 200;
+    font-family: "Rethink Sans", sans-serif;
+    font-size: 4.5vmin;
     font-style: italic;
-    line-height: 0.5lh;
+    line-height: 5.75vmin;
+    font-weight: 200;
     vertical-align: top;
     color: aliceblue;
-    margin-top: -1lh;
+    margin-top: -12vmin;
+    margin-left: 10%;
+
 }
 
 p {
     color: white;
-    font-family: "Noto Sans", sans-serif;
-    font-size: 0.75lh;
-    line-height: 1lh;
+    font-family: "Rethink Sans", sans-serif;
+    font-size: 8.25vmin;
+    line-height: 10vmin;
     vertical-align: middle;
     letter-spacing: 0.01lh;
+    margin: 10%;
+    hyphens: manual;
 }
+
+.line {
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
 
 .unselect {
   -webkit-user-select: none; /* Safari */
@@ -58,38 +84,82 @@ p {
 }
 
 .gender {
+     font-family: "Averia Libre";
+     font-style: italic;
     cursor: progress;
     color: greenyellow;
 }
 
 .language {
+    font-family: "Bricolage Grotesque", "Tiro Bangla", "Akaya Telivigala", "Anek Kannada", "Amita", sans-serif;
     cursor: help;
     color: magenta;
 }
 
 .creativity {
+    font-family: "Codystar", sans-serif;
     cursor: context-menu;
-    color: aqua;
+    color: rgb(0, 255, 229);
 }
 
 #greeting:hover {
-    text-decoration: underline;
+    text-decoration-line: line-through;
 }
 
 
 .unselect {
-    display: inline-block;
+    position: sticky;
+    left: 0;
+    bottom: 0;
+    z-index: 10;
+    display: inline-flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex-flow: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+
+}
+
+.navoption {
+    width: 100%;
+}
+
+#title {
+    background-color: yellow;
+}
+
+#page {
+    background-color: magenta;
+}
+
+#citations {
+    background-color: greenyellow;
+}
+
+#print, #reset {
+    background-color: rgb(0, 255, 229);
+}
+
+button {
+    background: none;
 }
 
 a, .button {
-    text-decoration: none;
+    font-family: "Rethink Sans", sans-serif;
+    font-size: 1.75vmin;
     color: blue;
+    line-height: 3vmin;
+    text-align: center;
+    text-decoration: none;
     cursor: copy;
 }
 
 
 @media print {
-  @page { size: 80mm auto; margin: 20%; }
+     body {-webkit-print-color-adjust: exact;}
+  @page { size: auto; }
 
   html {
     width: 8.5in !important;
@@ -100,36 +170,60 @@ a, .button {
     overflow: visible !important;
   }
 
+  
+
   body {
+    content: "";
     display: block !important;
     position: static !important;
-    width: 7in !important;
-    margin: 10%  !important;
+    width: 7.5in !important;
     color: #000 !important;
     background: #fff !important;
-    font-size: 12px !important;
+    top: 1in;
+    bottom: 1in;
+    left: 1in;
+    right: 1in;
   }
 
-h3, p, .unselect, a{
+h3, p, h6, .unselect, a{
     color: #000;
+}
+
+h3 {
+    font-size: 32px;
+    line-height: 32px;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+}
+
+h6 {
+    font-size: 16px;
+    line-height: 16px;
+    margin-top: 12px;
+    margin-bottom: 0;
+    margin-left: 0;
+}
+
+p {
+    font-size: 28px;
+    line-height: 32px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    margin-left: 0;
 }
 
 .clickable {
     color: #000;
 }
 
-.creativity {
-    text-decoration: underline;
-    text-decoration-style: wavy;
+a {
+    font-size: 12px;
 }
 
-.gender {
-    text-decoration: underline;
-    text-decoration-style: dashed;
+.unselect {
+    width: 50%;
+    height: 50%;
 }
 
-.language {
-    text-decoration: underline;
-    text-decoration-style: dotted;
-}
 }
