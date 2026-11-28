@@ -20,7 +20,7 @@ body {
   justify-content: center;
   align-items: center;
   background-color: blue;
-  margin: 10%;
+  margin: 5%;
 }
 
 .head {
@@ -33,13 +33,12 @@ body {
   font-size: 3.5vmin;
   line-height: 5vmin;
   color: greenyellow;
-  cursor: ew-resize;
 }
 
 
 img {
   height: auto;
-  width: 55vmin;
+  width: 50vmin;
   display: flex;
   align-self: center;
   mix-blend-mode: difference;
@@ -108,6 +107,7 @@ p {
 
 .unselect {
     position: sticky;
+    position: fixed;
     left: 0;
     bottom: 0;
     z-index: 100;
