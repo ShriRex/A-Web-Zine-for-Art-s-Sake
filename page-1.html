@@ -182,21 +182,6 @@
   }
 }
 
-window.workaroundBackgroundBlendMode = (function() {
-  var ua = UAParser()
-  var isWebKit = (ua.engine.name === "WebKit")
-  var isIOS = (ua.os.name === "iOS")
-  var debug = false //|| true
-  var shouldActivate = (isWebKit && isIOS) || debug;
-
-  if (shouldActivate) {
-    document.body.classList.add("is-ios-webkit")
-  }
-
-  // You can inspect this returned object afterwards
-  return {isWebKit, isIOS, debug, shouldActivate, ua}
-})()
-
 </script>
 </body>
 
