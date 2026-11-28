@@ -132,7 +132,22 @@ const srcArray = [
 'zine images/zine-image-83.jpg',
 'zine images/zine-image-84.jpg',
 'zine images/zine-image-85.jpg',
-'zine images/zine-image-86.jpg'];
+'zine images/zine-image-86.jpg',
+'zine images/zine-image-87.jpg',
+'zine images/zine-image-88.jpg',
+'zine images/zine-image-89.jpg',
+'zine images/zine-image-90.jpg',
+'zine images/zine-image-91.jpg',
+'zine images/zine-image-92.jpg',
+'zine images/zine-image-93.jpg',
+'zine images/zine-image-94.jpg',
+'zine images/zine-image-95.jpg',
+'zine images/zine-image-96.jpg',
+'zine images/zine-image-97.jpg',
+'zine images/zine-image-98.jpg',
+'zine images/zine-image-99.jpg',
+'zine images/zine-image-100.jpg',
+];
 
 imgEl.src - srcArray[0];
 
@@ -141,6 +156,7 @@ btn.addEventListener('click', () => {
 });
 
 let index;
+let index1;
 
 randomImage();
 function randomImage() {
@@ -148,7 +164,12 @@ function randomImage() {
     if (randomIndex !== index){
     imgEl.src = srcArray[randomIndex];
     index = randomImage;
-    } else {
+    } 
+    if (randomIndex !== index1) {
+    imgEl.src = srcArray[randomIndex];
+    index1 = randomImage;
+    }
+    else {
     randomImage();
     }
     
@@ -227,6 +248,37 @@ const srcArray2 = [
 'art images/art-image-67.jpeg',
 'art images/art-image-68.jpeg',
 'art images/art-image-69.jpeg',
+'art images/art-image-70.jpeg',
+'art images/art-image-71.jpeg',
+'art images/art-image-72.jpeg',
+'art images/art-image-73.jpeg',
+'art images/art-image-74.jpeg',
+'art images/art-image-75.jpeg',
+'art images/art-image-76.jpeg',
+'art images/art-image-77.jpeg',
+'art images/art-image-78.jpeg',
+'art images/art-image-79.jpeg',
+'art images/art-image-80.jpeg',
+'art images/art-image-81.jpeg',
+'art images/art-image-82.jpeg',
+'art images/art-image-83.jpeg',
+'art images/art-image-84.jpeg',
+'art images/art-image-85.jpeg',
+'art images/art-image-86.jpeg',
+'art images/art-image-87.jpeg',
+'art images/art-image-88.jpeg',
+'art images/art-image-89.jpeg',
+'art images/art-image-90.jpeg',
+'art images/art-image-91.jpeg',
+'art images/art-image-92.jpeg',
+'art images/art-image-93.jpeg',
+'art images/art-image-94.jpeg',
+'art images/art-image-95.jpeg',
+'art images/art-image-96.jpeg',
+'art images/art-image-97.jpeg',
+'art images/art-image-98.jpeg',
+'art images/art-image-99.jpeg',
+'art images/art-image-100.jpeg',
 ];
 
 imgEl2.src - srcArray2[0];
@@ -236,6 +288,7 @@ btn2.addEventListener('click', () => {
 });
 
 let index2;
+let index3; 
 
 randomImage2();
 function randomImage2() {
@@ -243,7 +296,12 @@ function randomImage2() {
     if (randomIndex2 !== index2){
     imgEl2.src = srcArray2[randomIndex2];
     index2 = randomImage2;
-    } else {
+    } 
+    if (randomIndex2 !== index3) {
+    imgEl2.src = srcArray2[randomIndex2];
+    index3 = randomImage2;
+    }
+    else {
     randomImage2();
     }
     

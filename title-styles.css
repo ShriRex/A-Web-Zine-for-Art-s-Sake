@@ -20,6 +20,7 @@ body {
   justify-content: center;
   align-items: center;
   background-color: blue;
+  margin-top: 10%;
   margin: 5%;
 }
 
@@ -40,7 +41,7 @@ img {
   height: auto;
   width: 50vmin;
   display: flex;
-  align-self: center;
+  align-self: baseline;
   mix-blend-mode: difference;
 }
 
